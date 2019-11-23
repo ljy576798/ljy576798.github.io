@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="迎君鲤">
 <meta property="og:description" content="正则的概念正则表达式(regular expression)是一个描述字符规则的对象。可以用来检查一个字符串是否含有某个子字符串，将匹配的子字符串做替换或者从某个字符串中取出符合某个条件的子串等。 为什么要用正则：前端往往有大量的表单数据校验工作，采用正则表达式会使得数据校验的工作量大大减轻。常用效果：邮箱、手机号、身份证号等。 创建方式1、（ i：表示忽略大小写ignore。g：表示全局匹配，查">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-11-23T03:35:28.976Z">
+<meta property="og:updated_time" content="2019-11-23T11:08:40.550Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="迎君鲤" type="application/atom+xml">
@@ -88,6 +88,7 @@
 <h2 id="为什么要用正则："><a href="#为什么要用正则：" class="headerlink" title="为什么要用正则："></a>为什么要用正则：</h2><p>前端往往有大量的表单数据校验工作，采用正则表达式会使得数据校验的工作量大大减轻。常用效果：邮箱、手机号、身份证号等。</p>
 <h3 id="创建方式"><a href="#创建方式" class="headerlink" title="创建方式"></a>创建方式</h3><p>1、（ i：表示忽略大小写ignore。g：表示全局匹配，查找所有匹配而非在找到第一个匹配后停止 global。）var reg = new RegExp(“study”，“ig”);   // 第二个参数为修饰符</p>
 <p>2、var reg = /study/ig;</p>
+<a id="more"></a>
 <h3 id="正则对象方法"><a href="#正则对象方法" class="headerlink" title="正则对象方法"></a>正则对象方法</h3><p>test： 正则实例对象的test方法返回一个布尔值，表示当前模式是否能匹配参数字符串<br>/cat/.test(‘cats and dogs’) // true（代码验证参数字符串之中是否包含cat，结果返回true。</p>
 <p>如果正则表达式带有g修饰符，则每一次test方法都从上一次结束的位置开始向后匹配</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> r = <span class="regexp">/x/g</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="string">'_x_x'</span>;</span><br><span class="line"></span><br><span class="line">r.lastIndex <span class="comment">// 0</span></span><br><span class="line">r.test(s) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">r.lastIndex <span class="comment">// 2</span></span><br><span class="line">r.test(s) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">r.lastIndex <span class="comment">// 4</span></span><br><span class="line">r.test(s) <span class="comment">// false</span></span><br></pre></td></tr></table></figure></div>
